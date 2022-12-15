@@ -3,7 +3,7 @@
 ///
 /// # Exemple
 /// ```
-/// let r = tp3::exercice2::sieve(7);
+/// let r = td_exercices_choisis::exercice2::sieve(7);
 /// assert_eq!(r, vec![2, 3, 5, 7])
 /// ```
 pub fn sieve(n: u32) -> Vec<u32> {

@@ -24,7 +24,7 @@ pub enum Token {
 ///
 /// # Exemple
 /// ```
-/// use tp3::exercice3::*;
+/// use td_exercices_choisis::exercice3::*;
 /// let r = compute(&[Token::Number(4), Token::Number(3), Token::Op(Operator::Plus)]);
 /// assert_eq!(r, Ok(7));
 /// ```
