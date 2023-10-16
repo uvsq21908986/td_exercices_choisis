@@ -6,19 +6,23 @@ pub struct Song {
 
 /// Retourne la note moyenne d'un ensemble de morceaux.
 pub fn average_rank(songs: &Vec<Song>) -> f64 {
-    panic!("Not implemented!")
+    let total_rank: u32 = songs.iter().map(|song| song.rank).sum();
+    let num_songs = songs.len() as f64;
+    total_rank as f64 / num_songs
 }
+
 
 /// Filtre les morceaux dans `songs` et ne garde que ceux dont la note est
 /// strictement supérieure à `rank_min`.
 pub fn filter_songs(songs: Vec<Song>, rank_min: u32) -> Vec<Song> {
-    panic!("Not implemented!")
+    songs.into_iter().filter(|song| song.rank > rank_min).collect()
 }
 
 /// Filtre les morceaux dans `songs` pour ne conserver que ceux dont la note
 /// est strictement supérieure à la moyenne.
 pub fn good_songs(songs: Vec<Song>) -> Vec<Song> {
-    panic!("Not implemented!")
+    let avg_rank = average_rank(&songs);
+    songs.into_iter().filter(|song| song.rank > avg_rank).collect()
 }
 
 #[cfg(test)]
